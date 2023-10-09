@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="mx-4">
         <Outlet />
       </main>
     </>
