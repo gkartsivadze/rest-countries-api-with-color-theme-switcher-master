@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Search from "./Search";
 
-export default function FilterSection({ data }) {
+export default function FilterSection({ data, filter, setFilter, onSubmit }) {
     const [regionData, setRegionData] = useState([]);
 
     useEffect(() => {
@@ -16,11 +16,21 @@ export default function FilterSection({ data }) {
         setRegionData(tempArr);
     }, [])
 
+    function handleChange(e) {
+        setFilter(prev => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }))
+    }
+
     return (
-        <section>
-            <Search />
-            <select className="outline-none">
-                <option key={2}>Filter by Region</option>
+        <section onChange={handleChange} className="py-4">
+            <Search filter={filter.name} onSubmit={onSubmit} />
+            <select
+                name="region"
+                className="outline-none"
+            >
+                <option key={2} value=''>Filter by Region</option>
                 {
                     regionData.map(region => <option key={region} value={region}>{region}</option>)
                 }
