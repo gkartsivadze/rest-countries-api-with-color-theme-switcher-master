@@ -2,7 +2,7 @@ import { FaSearch } from 'react-icons/fa'
 
 export default function Search({ onSubmit }) {
     return (
-        <div className=' shadow-sm shadow-slate-400 my-4'>
+        <div className=' shadow-sm shadow-slate-400 my-4 sm:flex-1'>
             <button
                 className='p-4'
                 onClick={onSubmit}>

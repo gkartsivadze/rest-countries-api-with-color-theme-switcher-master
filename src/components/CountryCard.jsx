@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 export default function CountryCard({ country }) {
     return (
-        <div className=" w-80">
+        <Link to={"/country-page/" + country.name} className=" w-80 hover:bg-black/20">
             <img
-                className=" h-56 object-cover"
+                className="w-full h-56 object-cover"
                 src={country.flags.png} />
             <div className="px-5">
                 <h1
@@ -15,6 +17,6 @@ export default function CountryCard({ country }) {
                     <li><b>Capital:</b> { country.capital }</li>
                 </ul>
             </div>
-        </div>
+        </Link>
     )
 };

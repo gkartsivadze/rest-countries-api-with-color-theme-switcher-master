@@ -24,7 +24,7 @@ export default function FilterSection({ data, filter, setFilter, onSubmit }) {
     }
 
     return (
-        <section onChange={handleChange} className="py-4">
+        <section onChange={handleChange} className="py-4 sm:flex sm:gap-4">
             <Search filter={filter.name} onSubmit={onSubmit} />
             <select
                 name="region"

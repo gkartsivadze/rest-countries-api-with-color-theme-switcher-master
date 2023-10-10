@@ -6,6 +6,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Main from './components/Main.jsx'
 import CountryPage from './components/CountryPage.jsx'
 
+import data from './assets/data.json'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -13,10 +15,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Main />
+        element: <Main data={data} />
       },{
-        path: '/country-page/:countryId',
-        element: <CountryPage />
+        path: '/country-page/:countryName',
+        element: <CountryPage data={data} />
       }
     ]
   }
