@@ -22,7 +22,7 @@ export default function Main({ data }) {
     return (
         <>
             <FilterSection data={data} filter={filter} setFilter={setFilter} onSubmit={filterItems} />
-            <section className="flex flex-wrap justify-evenly gap-6">
+            <section className="flex flex-wrap justify-evenly gap-6 [&>*]:w-80">
                 {filteredData.map(item => <CountryCard key={item.name} country={item} />)}
             </section>
         </>

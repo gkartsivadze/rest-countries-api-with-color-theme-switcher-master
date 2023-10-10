@@ -12,9 +12,9 @@ export default function CountryPage({ data }) {
                 <FaArrowCircleLeft className="inline me-3" />Back
             </Link>
             <section className="md:flex">
-                <img className="mb-8 w-full md:flex-grow md:w-auto object-fill" src={country.flags.png} />
-                <div className="grid grid-rows-[min-content_min-content] content-evenly ">
-                    <b className="text-1xl">{country.name}</b>
+                <img className="mb-8 w-full md:flex-[0_0_50vw] md:w-auto object-fill" src={country.flags.png} />
+                <div className="grid grid-rows-[min-content_min-content] content-evenly md:px-10 ">
+                    <b className="text-2xl">{country.name}</b>
                     <div className="flex flex-wrap md:flex-nowrap md:min-w-max text-gray-600 justify-between gap-y-8">
                         <ul>
                             <li><b>Native Name:</b> {country.nativeName}</li>
