@@ -28,9 +28,9 @@ export default function FilterSection({ data, filter, setFilter, onSubmit }) {
             <Search filter={filter.name} onSubmit={onSubmit} />
             <select
                 name="region"
-                className="outline-none"
+                className="outline-none bg-transparent [&>*]:dark:bg-dark-blue"
             >
-                <option key={2} value=''>Filter by Region</option>
+                <option key={"default"} value=''>Filter by Region</option>
                 {
                     regionData.map(region => <option key={region} value={region}>{region}</option>)
                 }

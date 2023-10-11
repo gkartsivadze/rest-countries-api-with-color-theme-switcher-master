@@ -11,11 +11,11 @@ export default function CountryPage({ data }) {
             <Link className="my-10 px-4 py-1 inline-block shadow-[0_0_5px_grey]" to="/">
                 <FaArrowCircleLeft className="inline me-3" />Back
             </Link>
-            <section className="md:flex">
-                <img className="mb-8 w-full md:flex-[0_0_50vw] md:w-auto object-fill" src={country.flags.png} />
-                <div className="grid grid-rows-[min-content_min-content] content-evenly md:px-10 ">
-                    <b className="text-2xl">{country.name}</b>
-                    <div className="flex flex-wrap md:flex-nowrap md:min-w-max text-gray-600 justify-between gap-y-8">
+            <section className="lg:flex flex-wrap">
+                <img className="mb-8 w-full flex-1 object-fill" src={country.flags.png} />
+                <div className="flex flex-col justify-evenly lg:px-10 ">
+                    <b className="text-2xl my-4">{country.name}</b>
+                    <div className="flex flex-wrap gap-8 lg:flex-nowrap lg:min-w-max text-gray-600 dark:text-gray-200 justify-between gap-y-8">
                         <ul>
                             <li><b>Native Name:</b> {country.nativeName}</li>
                             <li><b>Population:</b> {country.population}</li>
